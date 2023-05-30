@@ -9,6 +9,23 @@ app.listen(80,()=>{
     console.log("Server listening to port 80")
 })
 
+//import sequelize
+const sequelize=require("./database/db.config")
+
+sequelize.authenticate()
+.then(()=>console.log("Connection sucess"))
+.catch(err=>console.log("Error occured : ",err))
+
+
+
+
+
+
+
+
+
+
+
 //invaid path middleware
 app.use("*",(req,res,next)=>{
     res.send({message:"Invalid path"})
