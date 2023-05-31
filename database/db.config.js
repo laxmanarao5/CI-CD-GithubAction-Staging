@@ -14,5 +14,8 @@ const sequelize=new Sequelize(process.env.DB_NAME,
     }
     )
 
+//Syncing with db
+sequelize.sync()
+
 //export sequelize connection
 module.exports=sequelize

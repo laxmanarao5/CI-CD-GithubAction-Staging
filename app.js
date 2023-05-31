@@ -13,14 +13,16 @@ app.listen(80,()=>{
 const sequelize=require("./database/db.config")
 
 sequelize.authenticate()
-.then(()=>console.log("Connection sucess"))
-.catch(err=>console.log("Error occured : ",err))
+.then(()=>console.log("DB Connection successful"))
+.catch(err=>console.log("Error occured : ",err.message))
 
 
 
+//import API  routes
+const employeesApp=require("./routes/employees.route")
 
-
-
+//routing to Employee API
+app.use("/employees",employeesApp)
 
 
 
