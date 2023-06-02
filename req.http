@@ -1,3 +1,24 @@
 GET http://localhost/employees/test
 
 ###
+POST http://localhost/employees/register
+Content-Type: application/json
+
+{
+    "firstName":"laxman",
+    "lastName":"boddepalli",
+    "email":"lakshmana5296@gmail.com",
+    "salary":40000,
+    "user":{
+        "password":"Laxmana@123"
+    }
+}
+
+###
+POST http://localhost/employees/login
+Content-Type: application/json
+
+{
+    "email":"lakshmana5296@gmail.com",
+    "password":"Laxmana@123"
+}

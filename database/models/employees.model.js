@@ -29,7 +29,7 @@ exports.Employees=sequelize.define("employees",{
     },
     roleId:{
         type:DataTypes.BIGINT,
-        allowNull:false
+        allowNull:true
     }
 },{
     freezeTableName:true,

@@ -1,8 +1,11 @@
 //import sequelize
-const sequelize=require("../db.config")
+const sequelize = require("../db.config")
 
 //import datatypes
-const {DataTypes, DATE}=require("sequelize")
+const {DataTypes, DATE} = require("sequelize")
+
+//import bcrypt js
+const bcryptjs = require("bcryptjs")
 
 //define model
 exports.Users=sequelize.define("users",{
@@ -11,12 +14,12 @@ exports.Users=sequelize.define("users",{
         primaryKey:true,
         autoIncrement:true
     },
-    empId:{
-        type:DataTypes.BIGINT,
-        allowNull:true
-    },
     password:{
-        type:DataTypes.STRING
+        type:DataTypes.STRING,
+        set(pass){
+            let newpassword=bcryptjs.hashSync(pass,5)
+            this.setDataValue("password",newpassword)
+        }
     }
 },{
     freezeTableName:true,
