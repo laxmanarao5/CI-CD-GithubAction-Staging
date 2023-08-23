@@ -4,6 +4,16 @@ const exp = require("express")
 //calling express constructor
 const app = exp()
 
+
+const cors=require("cors")
+
+app.use(cors())
+
+
+//connect react build with nodejs web server
+const path=require("path")
+app.use(exp.static(path.join(__dirname,"./employees-app/build")))
+
 //exposing to host port
 // app.listen(80,()=>{
 //     console.log("Server listening to port 80")

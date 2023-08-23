@@ -9,7 +9,7 @@ import RootComponent from './components/rootComponent/RootComponent';
 import ErrorPage from './components/errorPage/ErrorPage';
 import Registration from './components/registration/Registration';
 import AdminPage from './components/admin/AdminPage';
-
+import Memeber from './components/member/Memeber';
 function App() {
 
   //create router object
@@ -30,6 +30,10 @@ function App() {
         {
           path:"admin",
           element:<AdminPage/>
+        },
+        {
+          path:"member",
+          element:<Memeber/>
         }
       ]
     }

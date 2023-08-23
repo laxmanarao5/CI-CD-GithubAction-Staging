@@ -8,7 +8,7 @@ const adminApp=exp.Router()
 const { adminPrivateRoute } = require("../middlewares/admin.middleware")
 
 //import controllers
-const {getAllUsers, assignRole} = require("../controllers/admin.controller")
+const {getAllUsers, assignRole,getAllUsersWithSearchKey,getAllRoles} = require("../controllers/admin.controller")
 
 //Route to get all users
 adminApp.get("/users",adminPrivateRoute,getAllUsers)
@@ -16,6 +16,10 @@ adminApp.get("/users",adminPrivateRoute,getAllUsers)
 //Route to assign role
 adminApp.put("/user/:userId/role/:roleId",adminPrivateRoute,assignRole)
 
+//Route to get all users with name,email and role
+adminApp.get("/users/:search_key",adminPrivateRoute,getAllUsersWithSearchKey)
+
+adminApp.get("/roles",adminPrivateRoute,getAllRoles)
 
 //export router
 module.exports = adminApp

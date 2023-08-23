@@ -75,7 +75,7 @@ exports.login = expressAsyncHandler(async(req,res) => {
     //user not registered
     if(userData === null)
     {
-        res.status(401).send({message:"User not yet registered"})
+        res.status.send({message:"User not yet registered",loginStatus:false})
     }
     else
     {
@@ -94,14 +94,14 @@ exports.login = expressAsyncHandler(async(req,res) => {
             let signedToken = jwt.sign(userData,process.env.SECRET_KEY)
 
             //send token as response
-            res.send({message:"Login Successful",token:signedToken,user:userData})
+            res.send({message:"Login Successful",loginStatus:true,token:signedToken,user:userData})
         }
 
         //password is not valid
         else
         {
             //response for invalid password
-            res.status(401).send({message:"Invalid password"})
+            res.status.send({message:"Invalid password",loginStatus:false})
         }
 
     }
