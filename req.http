@@ -1,0 +1,42 @@
+GET http://localhost/employees/test
+
+###
+POST http://localhost/employees/register 
+Content-Type: application/json
+
+{
+    "firstName":"Kushala",
+    "lastName":"N",
+    "email":"Kushala@gmail.com",
+    "salary":40000,
+    "user":{
+        "password":"Laxmana@123"
+    }
+}
+
+###
+POST http://localhost/employees/login
+Content-Type: application/json
+
+{
+    "email":"lakshmana5296@gmail.com",
+    "password":"Laxmana@123"
+} 
+
+###
+GET http://localhost/admin/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJsYXhtYW4iLCJsYXN0TmFtZSI6ImJvZGRlcGFsbGkiLCJlbWFpbCI6Imxha3NobWFuYTUyOTZAZ21haWwuY29tIiwic2FsYXJ5IjoiNDAwMDAiLCJyb2xlIjp7ImlkIjoiNSIsInJvbGVOYW1lIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoifSwiaWF0IjoxNjg1OTQwMDQ5fQ.ly1kbtadag_melYj-X3cQz7EOCyIXLBAM5ErVOSalLU
+
+
+###
+GET http://localhost/admin/users/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJsYXhtYW4iLCJsYXN0TmFtZSI6ImJvZGRlcGFsbGkiLCJlbWFpbCI6Imxha3NobWFuYTUyOTZAZ21haWwuY29tIiwic2FsYXJ5IjoiNDAwMDAiLCJyb2xlIjp7ImlkIjoiNSIsInJvbGVOYW1lIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoifSwiaWF0IjoxNjg1OTQwMDQ5fQ.ly1kbtadag_melYj-X3cQz7EOCyIXLBAM5ErVOSalLU
+
+###
+
+PUT http://localhost/admin/user/1/role/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJsYXhtYW4iLCJsYXN0TmFtZSI6ImJvZGRlcGFsbGkiLCJlbWFpbCI6Imxha3NobWFuYTUyOTZAZ21haWwuY29tIiwic2FsYXJ5IjoiNDAwMDAiLCJyb2xlIjp7ImlkIjoiNSIsInJvbGVOYW1lIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoifSwiaWF0IjoxNjg1OTQwMDQ5fQ.ly1kbtadag_melYj-X3cQz7EOCyIXLBAM5ErVOSalLU
+
+###
+GET http://localhost/admin/roles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJsYXhtYW4iLCJsYXN0TmFtZSI6ImJvZGRlcGFsbGkiLCJlbWFpbCI6Imxha3NobWFuYTUyOTZAZ21haWwuY29tIiwic2FsYXJ5IjoiNDAwMDAiLCJyb2xlIjp7ImlkIjoiNSIsInJvbGVOYW1lIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTI2VDE2OjM3OjQ4LjI0NFoifSwiaWF0IjoxNjg1OTQwMDQ5fQ.ly1kbtadag_melYj-X3cQz7EOCyIXLBAM5ErVOSalLU

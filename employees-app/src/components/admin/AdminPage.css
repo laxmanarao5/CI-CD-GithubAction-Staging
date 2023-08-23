@@ -1,0 +1,6 @@
+.table>:not(caption)>*>* {
+    padding: 0.6rem 0.5rem;
+}
+.mytable .selectedField{
+    background-color: #A9A9A9;
+}
