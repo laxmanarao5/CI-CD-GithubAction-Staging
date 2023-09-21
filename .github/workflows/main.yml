@@ -1,4 +1,4 @@
-name: FE dev deployment
+name: FE Prod deployment
 
 on:
   push:
