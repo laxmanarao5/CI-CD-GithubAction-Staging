@@ -2,7 +2,7 @@ name: FE dev deployment
 
 on:
   push:
-    branches: ['fe-dev']
+    branches: ['fe-prod']
 
 jobs:
   deploy:
@@ -38,7 +38,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy to S3 bucket
-        run: aws s3 sync ./build s3://employees-app-dev
+        run: aws s3 sync ./build s3://employees-app
 
       - name: Create invalidation
-        run: aws cloudfront create-invalidation --distribution-id E2H972DD5M0YGI --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E15X1CDF0EE9NW --paths "/*"
