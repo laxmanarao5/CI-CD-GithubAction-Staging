@@ -8,12 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      working-directory: 'employees-app'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          path: 'employees-app'
       - name: Setup Nodejs environment
         uses: actions/setup-node@v3
         with:
