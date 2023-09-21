@@ -3,7 +3,7 @@ name: FE dev deployment
 on:
   push:
     branches:
-      - 'fe-dev'
+      - master
 
 jobs:
   deploy:
